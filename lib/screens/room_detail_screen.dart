@@ -71,7 +71,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
                             child: Container(
                               width: 72, height: 72,
                               decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.9),
+                                color: Colors.white.withValues(alpha: 0.9),
                                 borderRadius: BorderRadius.circular(16),
                               ),
                               child: Icon(
@@ -83,7 +83,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
                           ),
                           if (isMaint)
                             Container(
-                              color: Colors.black.withOpacity(0.4),
+                              color: Colors.black.withValues(alpha: 0.4),
                               child: Center(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -107,7 +107,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
                         onTap: () => Navigator.of(context).pop(),
                         child: Container(
                           width: 40, height: 40,
-                          decoration: BoxDecoration(color: Colors.black.withOpacity(0.35), shape: BoxShape.circle),
+                          decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.35), shape: BoxShape.circle),
                           child: const Icon(Icons.arrow_back, size: 20, color: Colors.white),
                         ),
                       ),
@@ -121,7 +121,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
                         child: Container(
                           width: 40, height: 40,
                           decoration: BoxDecoration(
-                            color: _fav ? Colors.red.withOpacity(0.85) : Colors.black.withOpacity(0.35),
+                            color: _fav ? Colors.red.withValues(alpha: 0.85) : Colors.black.withValues(alpha: 0.35),
                             shape: BoxShape.circle,
                           ),
                           child: Icon(_fav ? Icons.favorite : Icons.favorite_border, size: 20, color: Colors.white),
@@ -146,7 +146,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
-                            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+                            boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,7 +191,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(16),
-                                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+                                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
                               ),
                               child: isFull
                                   ? Center(
@@ -269,7 +269,7 @@ class _RoomDetailScreenState extends State<RoomDetailScreen> {
               padding: EdgeInsets.fromLTRB(20, 16, 20, MediaQuery.of(context).padding.bottom + 16),
               decoration: BoxDecoration(
                 color: Colors.white,
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 16, offset: const Offset(0, -4))],
+                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 16, offset: const Offset(0, -4))],
               ),
               child: isMaint
                   ? Container(

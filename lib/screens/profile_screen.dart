@@ -34,7 +34,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
               ),
               child: Row(
                 children: [
@@ -122,7 +122,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(color: AppColors.bookedBg),
-                    boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8)],
+                    boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -163,7 +163,7 @@ class _SectionCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(16),
-              boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8)],
+              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
             ),
             child: Column(
               children: children.asMap().entries.map((e) {
@@ -258,7 +258,7 @@ class _ToggleRow extends StatelessWidget {
           Icon(icon, size: 20, color: AppColors.t2),
           const SizedBox(width: 16),
           Expanded(child: Text(label, style: GoogleFonts.sora(fontSize: 14, color: AppColors.t1))),
-          Switch(value: value, onChanged: onChanged, activeColor: AppColors.navy),
+          Switch(value: value, onChanged: onChanged, activeTrackColor: AppColors.navy),
         ],
       ),
     );

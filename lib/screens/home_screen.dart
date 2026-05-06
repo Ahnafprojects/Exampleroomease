@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   width: 40,
                                   height: 40,
                                   decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.12),
+                                    color: Colors.white.withValues(alpha: 0.12),
                                     shape: BoxShape.circle,
                                   ),
                                   child: const Icon(Icons.notifications_outlined, size: 20, color: Colors.white),
@@ -101,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.15),
+                          color: Colors.white.withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(99),
                         ),
                         child: Row(
@@ -171,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       scrollDirection: Axis.horizontal,
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       itemCount: 2,
-                      itemBuilder: (_, __) => Container(
+                      itemBuilder: (_, _) => Container(
                         width: 240, margin: const EdgeInsets.only(right: 12),
                         child: const SkeletonStatCard(),
                       ),
@@ -231,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               sliver: SliverList(
                 delegate: SliverChildBuilderDelegate(
-                  (_, __) => const SkeletonRoomCard(),
+                  (_, _) => const SkeletonRoomCard(),
                   childCount: 3,
                 ),
               ),
@@ -277,7 +277,7 @@ class _StatCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(16),
-            boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 16, offset: const Offset(0, 4))],
+            boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 16, offset: const Offset(0, 4))],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

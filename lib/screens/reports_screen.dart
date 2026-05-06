@@ -87,7 +87,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
                         decoration: BoxDecoration(
                           color: isActive ? Colors.white : Colors.transparent,
                           borderRadius: BorderRadius.circular(8),
-                          boxShadow: isActive ? [BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 8)] : null,
+                          boxShadow: isActive ? [BoxShadow(color: Colors.black.withValues(alpha: 0.08), blurRadius: 8)] : null,
                         ),
                         child: Center(
                           child: Text(p, style: GoogleFonts.sora(fontSize: 13, fontWeight: FontWeight.w600, color: isActive ? AppColors.navy : AppColors.t2)),
@@ -133,7 +133,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
               ),
               child: Column(
                 children: _utilBars.map((b) => Padding(
@@ -173,7 +173,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
               ),
               child: Column(
                 children: [
@@ -302,7 +302,7 @@ class _KpiCard {
 
 class _KpiCardWidget extends StatelessWidget {
   final _KpiCard card;
-  const _KpiCardWidget({super.key, required this.card});
+  const _KpiCardWidget({required this.card});
 
   @override
   Widget build(BuildContext context) {
@@ -311,7 +311,7 @@ class _KpiCardWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -24,7 +24,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
         title: Text('Notifikasi', style: GoogleFonts.sora(fontSize: 17, fontWeight: FontWeight.w600)),
         actions: [
           TextButton(
-            onPressed: () => setState(() { for (final n in notifs) n.read = true; }),
+            onPressed: () => setState(() { for (final n in notifs) { n.read = true; } }),
             child: Text('Tandai semua dibaca', style: GoogleFonts.sora(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.amber)),
           ),
         ],
@@ -87,8 +87,8 @@ class _NotifCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: notif.read ? Colors.white : const Color(0xFFFFF8ED),
           borderRadius: BorderRadius.circular(16),
-          border: notif.read ? null : Border.all(color: AppColors.amber.withOpacity(0.3)),
-          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8)],
+          border: notif.read ? null : Border.all(color: AppColors.amber.withValues(alpha: 0.3)),
+          boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8)],
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,

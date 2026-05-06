@@ -67,7 +67,7 @@ class _CheckInScreenState extends State<CheckInScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
               ),
               child: Row(
                 children: [
@@ -100,7 +100,7 @@ class _CheckInScreenState extends State<CheckInScreen> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.06), blurRadius: 12)],
+                boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.06), blurRadius: 12)],
               ),
               child: _state == 'waiting' ? _buildWaiting() : _state == 'checked' ? _buildChecked() : _buildReleased(),
             ),
@@ -172,7 +172,7 @@ class _CheckInScreenState extends State<CheckInScreen> {
           child: Container(
             width: double.infinity, height: 52,
             decoration: BoxDecoration(
-              color: _loadingManual ? AppColors.navy.withOpacity(0.8) : AppColors.navy,
+              color: _loadingManual ? AppColors.navy.withValues(alpha: 0.8) : AppColors.navy,
               borderRadius: BorderRadius.circular(12),
             ),
             child: Center(

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../widgets/widgets.dart';
 import '../data/mock_data.dart';
-import 's4_home.dart';
-import 's6_calendar.dart';
-import 's7_bookings.dart';
-import 's8_reports.dart';
-import 's9_profile.dart';
+import 'home_screen.dart';
+import 'calendar_screen.dart';
+import 'bookings_screen.dart';
+import 'reports_screen.dart';
+import 'profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   final int initialTab;

@@ -67,12 +67,12 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
               children: [
                 AnimatedBuilder(
                   animation: _progress,
-                  builder: (_, __) => SizedBox(
+                  builder: (_, _) => SizedBox(
                     width: 120,
                     child: LinearProgressIndicator(
                       value: _progress.value,
                       minHeight: 4,
-                      backgroundColor: Colors.white.withOpacity(0.2),
+                      backgroundColor: Colors.white.withValues(alpha: 0.2),
                       valueColor: const AlwaysStoppedAnimation<Color>(AppColors.amber),
                       borderRadius: BorderRadius.circular(99),
                     ),
